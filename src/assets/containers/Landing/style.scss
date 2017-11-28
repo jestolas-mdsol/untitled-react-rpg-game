@@ -1,0 +1,17 @@
+.landingContainer {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  color: white;
+}
+
+.headingWrapper {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  text-align: center;
+}

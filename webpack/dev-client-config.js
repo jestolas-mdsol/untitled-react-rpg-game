@@ -47,19 +47,40 @@ module.exports = {
         test: /\.scss$/,
         use: [
           { loader: 'style-loader' },
-          { loader: 'css-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              minimize: true,
+              modules: true,
+              localIdentName: '[name]__[local]--[hash:base64:5]',
+              importLoaders: 1,
+              import: false,
+              camelCase: true,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [
+                require('autoprefixer')(), // eslint-disable-line global-require
+              ],
+            },
+          },
           { loader: 'sass-loader' },
         ],
       },
       {
         test: /\.(jpg|png|svg)$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            limit: 25000,
-            name: 'images/[name].[ext]',
+        use: [
+          { loader: 'file-loader' },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              bypassOnDebug: true,
+            },
           },
-        },
+
+        ],
       },
     ],
   },

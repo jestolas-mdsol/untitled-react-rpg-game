@@ -6,6 +6,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import TopNav from '../TopNav';
 import Footer from '../../components/Footer';
+import styles from './style.scss';
 
 const faviconPath = require('../../images/favicon-32x32.png');
 
@@ -20,7 +21,7 @@ export default class App extends Component {
   render() {
     return (
       <MuiThemeProvider>
-        <div className="app">
+        <div className={styles.app}>
           <Helmet>
             <link rel="icon" href={faviconPath} type="image/x-icon" />
           </Helmet>
