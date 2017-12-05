@@ -1,0 +1,24 @@
+.gameContainer {
+  height: 50rem;
+  width: 50rem;
+  margin: 0 auto;
+  position: relative;
+  background-color: #000;
+}
+
+.playerContainer {
+  width: 41px;
+  height: 36px;
+  overflow: hidden;
+  position: absolute;
+  transition: background-position-x 0s, background-position-y 0s, top .10s ease-in-out, left .10s ease-in-out;
+  background-image: url('../../images/playerSprites.png');
+}
+
+// .playerSprite {
+//   width: 41px;
+//   height: 36px;
+//   // left: 41px;
+//   // position: absolute;
+//   transition: all .10s ease-in-out;
+// }

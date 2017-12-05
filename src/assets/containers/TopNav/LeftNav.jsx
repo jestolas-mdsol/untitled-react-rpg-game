@@ -18,7 +18,6 @@ const enhance = compose(
 const LeftNav = (props) => (
   <div>
     <AppBar title="LeftNav"
-      iconClassNameRight="muidocs-icon-navigation-expand-more"
       iconElementRight={<FlatButton label="Clicky clicky!" />} />
   </div>
 )
